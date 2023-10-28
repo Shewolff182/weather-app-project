@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Weather API</title>
-        <link href="./styles.css"  rel="stylesheet" />
-        <script  src="./scripts.js" defer></script>
-    </head>
-    <body>
-        <div class="header-container">
-            <h1 class="header">LOCAL WEATHER REPORT</h1>
-            <div>
-                <input id="input" type="text" placeholder="Enter City Name">
-                <button id="search-button">Search</button>
-            </div>
-            
-        </div>
-        <div>
-            <h1>Current Temp</h1>
-            <p id="city"></p>
-            <div>
-                <p class="city"></p>
-                <p class="state"></p>
-                <p class="Country"></p>
-            </div>
-        </div>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link href="./styles.css"  rel="stylesheet" />
+    <script  src="./scripts.js" defer></script>
+</head>
+<body>
+    <div class="header-container">
+        <h1>Local Weather Report</h1> 
+        <input type="text" name="location" placeholder="Enter City, State or zip" id="inputLocationBox">
+        <button id="searchButton" type="submit">Search</button>
+    </div>
     
-    </body>
+    <div class="todays-weather-container hidden">
+        <div class="todays-weather">
+            <h2 id="todays-weather-header"></h2>
+            <div class="location-wrapper">
+                <p id="city"></p>
+                <p id="state"></p>
+                <p id="country"></p>
+            </div>
+            <div>
+                <div class="current-temp">
+                    <h1 id="current-temp"></h1>
+                </div>
+                <p id="high-temp"></p>
+                <p id="low-temp"></p>
+                <p id="chance-of-precipitation"></p>
+            </div>
+        </div>
+        <div class="temp-type-container">
+            <h3 id="temp-type"></h3>
+        </div>
+    </div>
+    <div class="forecast-header-container hidden">
+        <h2 id="three-day-forecast-header"></h2>
+    </div>
+    <div class="three-day-weather-info"></div> 
+    <div class="hottest-day-container hidden">
+        <h2 id="hottest-day-info"></h2>
+    </div>
+</body>
 </html>
-<!-- //1. Add HTML to your to your project so you have a header, a text input and a button on the screen.
-2. The text input and the button should have IDs
-3. See the design - we are working on the first screen, the more simple one -->
